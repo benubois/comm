@@ -25,7 +25,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B57230361BAA6E89007C4AE4 /* Comm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Comm.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B57230361BAA6E89007C4AE4 /* Ann Comm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ann Comm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B572303A1BAA6E89007C4AE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B572303B1BAA6E89007C4AE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B572303D1BAA6E89007C4AE4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,7 +66,7 @@
 		B57230371BAA6E89007C4AE4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B57230361BAA6E89007C4AE4 /* Comm.app */,
+				B57230361BAA6E89007C4AE4 /* Ann Comm.app */,
 				B57230481BAA6E89007C4AE4 /* CommTests.xctest */,
 			);
 			name = Products;
@@ -112,9 +112,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B57230351BAA6E89007C4AE4 /* Comm */ = {
+		B57230351BAA6E89007C4AE4 /* Ann Comm */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B57230521BAA6E89007C4AE4 /* Build configuration list for PBXNativeTarget "Comm" */;
+			buildConfigurationList = B57230521BAA6E89007C4AE4 /* Build configuration list for PBXNativeTarget "Ann Comm" */;
 			buildPhases = (
 				B57230321BAA6E89007C4AE4 /* Sources */,
 				B57230331BAA6E89007C4AE4 /* Frameworks */,
@@ -124,9 +124,9 @@
 			);
 			dependencies = (
 			);
-			name = Comm;
+			name = "Ann Comm";
 			productName = Comm;
-			productReference = B57230361BAA6E89007C4AE4 /* Comm.app */;
+			productReference = B57230361BAA6E89007C4AE4 /* Ann Comm.app */;
 			productType = "com.apple.product-type.application";
 		};
 		B57230471BAA6E89007C4AE4 /* CommTests */ = {
@@ -158,6 +158,7 @@
 				TargetAttributes = {
 					B57230351BAA6E89007C4AE4 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = F69RDYTM6F;
 					};
 					B57230471BAA6E89007C4AE4 = {
 						CreatedOnToolsVersion = 6.4;
@@ -178,7 +179,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B57230351BAA6E89007C4AE4 /* Comm */,
+				B57230351BAA6E89007C4AE4 /* Ann Comm */,
 				B57230471BAA6E89007C4AE4 /* CommTests */,
 			);
 		};
@@ -226,7 +227,7 @@
 /* Begin PBXTargetDependency section */
 		B572304A1BAA6E89007C4AE4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B57230351BAA6E89007C4AE4 /* Comm */;
+			target = B57230351BAA6E89007C4AE4 /* Ann Comm */;
 			targetProxy = B57230491BAA6E89007C4AE4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -279,7 +280,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -317,7 +318,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 			};
@@ -327,9 +328,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Comm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -338,9 +341,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Comm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -360,6 +365,7 @@
 				);
 				INFOPLIST_FILE = CommTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Comm.app/Contents/MacOS/Comm";
 			};
@@ -376,6 +382,7 @@
 				);
 				INFOPLIST_FILE = CommTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Comm.app/Contents/MacOS/Comm";
 			};
@@ -393,13 +400,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B57230521BAA6E89007C4AE4 /* Build configuration list for PBXNativeTarget "Comm" */ = {
+		B57230521BAA6E89007C4AE4 /* Build configuration list for PBXNativeTarget "Ann Comm" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B57230531BAA6E89007C4AE4 /* Debug */,
 				B57230541BAA6E89007C4AE4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B57230551BAA6E89007C4AE4 /* Build configuration list for PBXNativeTarget "CommTests" */ = {
 			isa = XCConfigurationList;
@@ -408,6 +416,7 @@
 				B57230571BAA6E89007C4AE4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
