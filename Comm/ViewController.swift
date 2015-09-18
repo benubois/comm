@@ -15,34 +15,56 @@ class ViewController: NSViewController, NSTextViewDelegate {
     @IBOutlet var listTwo: NSTextView!
     @IBOutlet var output: NSTextView!
     
+    @IBOutlet weak var countOne: NSTextField!
+    @IBOutlet weak var countTwo: NSTextField!
+    @IBOutlet weak var countOutput: NSTextField!
+    
+    @IBOutlet weak var copyButton: NSButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         listOne.delegate = self
         listTwo.delegate = self
+        
+        copyButton.target = self
+        copyButton.action = "copy:"
     }
 
     func textDidChange(notification: NSNotification) {
         if let object = notification.object as? NSTextView {
             if object == listOne || object == listTwo {
                 if let listOneText = listOne.string, listTwoText = listTwo.string {
-                    comm(listOneText, stringTwo: listTwoText)
+                    update(listOneText, stringTwo: listTwoText)
                 }
             }
         }
     }
     
-    func comm(stringOne: String, stringTwo: String) {
+    func update(stringOne: String, stringTwo: String) {
         let setOne = stringToSet(stringOne)
         let setTwo = stringToSet(stringTwo)
         let common = setOne.intersect(setTwo)
         let commonString = "\n".join(common)
         output.string = commonString
+        
+        countOne.stringValue = "\(setOne.count)"
+        countTwo.stringValue = "\(setTwo.count)"
+        countOutput.stringValue = "\(common.count)"
     }
     
     func stringToSet(string: String) -> Set<String> {
         let array = string.componentsSeparatedByString("\n")
-        let set = Set(array)
+        let filteredArray = array.filter { $0 != "" }
+        let set = Set(filteredArray)
         return set
+    }
+    
+    func copy(obj:AnyObject?) {
+        if let outputText = output.string {
+            let pasteBoard = NSPasteboard.generalPasteboard()
+            pasteBoard.clearContents()
+            pasteBoard.writeObjects([outputText])
+        }
     }
 
 }
