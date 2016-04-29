@@ -44,7 +44,7 @@ class ViewController: NSViewController, NSTextViewDelegate {
         let setOne = stringToSet(stringOne)
         let setTwo = stringToSet(stringTwo)
         let common = setOne.intersect(setTwo)
-        let commonString = "\n".join(common)
+        let commonString = common.joinWithSeparator("\n")
         output.string = commonString
         
         countOne.stringValue = "\(setOne.count)"
@@ -54,8 +54,8 @@ class ViewController: NSViewController, NSTextViewDelegate {
     
     func stringToSet(string: String) -> Set<String> {
         let array = string.componentsSeparatedByString("\n")
-        let filteredArray = array.filter { $0 != "" }
-        let set = Set(filteredArray)
+        let formattedStrings = array.filter({ $0 != "" }).flatMap({$0.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())})
+        let set = Set(formattedStrings)
         return set
     }
     
